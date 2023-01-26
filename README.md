@@ -2,5 +2,5 @@
 
 ## startup
 ```shell
-curl https://raw.githubusercontent.com/AndromedaX7/ubuntu-init/main/startup.sh | sh
+wget https://raw.githubusercontent.com/AndromedaX7/ubuntu-init/main/startup.sh | sh
 ```
