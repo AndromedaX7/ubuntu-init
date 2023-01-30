@@ -2,26 +2,28 @@ echo "The script need root permission."
 
 export TargetHome=$HOME
 
+echo "Welcome to use the $(lsb_release -ds)."
+
 #sudo su
 echo "change software sources"
 sudo mv  /etc/apt/sources.list /etc/apt/sources.list.bak
 
 sudo cat > $TargetHome/sources.list <<EOF
-deb https://mirrors.ustc.edu.cn/ubuntu/ jammy main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ $(lsb_release -cs) main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ $(lsb_release -cs) main restricted universe multiverse
 
-deb https://mirrors.ustc.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ $(lsb_release -cs)-security main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ $(lsb_release -cs)-security main restricted universe multiverse
 
-deb https://mirrors.ustc.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ $(lsb_release -cs)-updates main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ $(lsb_release -cs)-updates main restricted universe multiverse
 
-deb https://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
-deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+deb https://mirrors.ustc.edu.cn/ubuntu/ $(lsb_release -cs)-backports main restricted universe multiverse
+deb-src https://mirrors.ustc.edu.cn/ubuntu/ $(lsb_release -cs)-backports main restricted universe multiverse
 
 ## Not recommended
-# deb https://mirrors.ustc.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
-# deb-src https://mirrors.ustc.edu.cn/ubuntu/ jammy-proposed main restricted universe multiverse
+# deb https://mirrors.ustc.edu.cn/ubuntu/ $(lsb_release -cs)-proposed main restricted universe multiverse
+# deb-src https://mirrors.ustc.edu.cn/ubuntu/ $(lsb_release -cs)-proposed main restricted universe multiverse
 EOF
 
 sudo cp $TargetHome/sources.list /etc/apt/sources.list
@@ -129,7 +131,7 @@ EOF
 echo "clean"
 sudo apt autoremove -y
 
-sudo rm -rf $PWD/sources.list
+#sudo rm -rf $PWD/sources.list
 #sudo rm -rf $PWD/startup-server.sh
 #sudo reboot
 
