@@ -8,5 +8,5 @@ curl https://raw.githubusercontent.com/AndromedaX7/ubuntu-init/main/startup.sh |
 
 ## server-startup
 ```shell
-curl https://raw.githubusercontent.com/AndromedaX7/ubuntu-init/main/startup.sh | sh
+curl https://raw.githubusercontent.com/AndromedaX7/ubuntu-init/main/startup-server.sh | sh
 ```
