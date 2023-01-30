@@ -67,7 +67,7 @@ sudo apt upgrade -y
 
 
 echo "install based software."
-sudo apt install  unzip wget fonts-wqy-microhei -y
+sudo apt install ssh unzip wget fonts-wqy-microhei -y
 
 echo "Download nginx"
 curl -o $TargetHome/Downloads/nginx-1.23.3.tar.gz https://nginx.org/download/nginx-1.23.3.tar.gz
