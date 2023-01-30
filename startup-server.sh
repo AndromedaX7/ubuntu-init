@@ -2,7 +2,7 @@ echo "The script need root permission."
 
 export TargetHome=$HOME
 
-echo "Welcome to use the $(lsb_release -ds)."
+echo "Welcome to use the $(lsb_release -ds) init script."
 
 #sudo su
 echo "change software sources"
