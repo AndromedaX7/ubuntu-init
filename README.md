@@ -1,4 +1,4 @@
-# ubuntu22.04-init
+# ubuntu22.10-init
 
 ## startup
 ```shell
@@ -10,7 +10,7 @@ curl https://raw.githubusercontent.com/AndromedaX7/ubuntu-init/main/startup.sh |
 cd ~
 curl http://122.143.19.199:8082/juzi/ubuntu-init/-/raw/main/startup.sh | sh
 ```
-
+# ubuntu18-22-server-init
 
 ## server-startup
 ```shell
